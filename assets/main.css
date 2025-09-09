@@ -317,6 +317,25 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	font-weight: 400;
 }
 
+/* Match hero microcopy style for secondary line */
+#text61b {
+	color: #333333;
+	font-family: 'Nunito', sans-serif;
+	letter-spacing: 0.05rem;
+	width: calc(100% + 0.05rem);
+	font-size: 0.875em;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+#text61b a:hover {
+	color: #FF7940;
+}
+
+#text61b a {
+	text-decoration: underline;
+}
+
 #text61 a:hover {
 	color: #FF7940;
 }
@@ -1941,6 +1960,102 @@ h1.style4 span.p:nth-child(n + 2), h2.style4 span.p:nth-child(n + 2), h3.style4 
 	min-width: 0.703125rem;
 }
 
+/* New lists styled to match existing list12 */
+#faq-list, #testimonials, #listDemo {
+	color: #919191;
+	font-family: 'Nunito', sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+#faq-list mark, #testimonials mark, #listDemo mark {
+	background-color: #BFD8FF;
+}
+
+#faq-list a, #testimonials a, #listDemo a {
+	color: #0D0D0D;
+	text-decoration: none;
+}
+
+#faq-list a:hover, #testimonials a:hover, #listDemo a:hover {
+	color: #247BFF;
+}
+
+#faq-list ul, #testimonials ul, #listDemo ul {
+	width: 100%;
+}
+
+#faq-list ul li, #testimonials ul li, #listDemo ul li {
+	margin-top: 0.5rem;
+}
+
+#faq-list ul li::after, #testimonials ul li::after, #listDemo ul li::after {
+	width: 0.625rem;
+}
+
+/* Remove default bullet flair for centered lists */
+#faq-list ul li::before, #faq-list ul li::after,
+#listDemo ul li::before, #listDemo ul li::after {
+	content: none !important;
+}
+
+/* Center containers; card styling for FAQ; pill grid for demo */
+#faq-list {
+	text-align: center;
+}
+
+#faq-list ul {
+	max-width: 48rem;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#faq-list ul li {
+	display: block !important;
+	background: #F8FAFF;
+	border: 1px solid #E6EEFF;
+	border-radius: 0.5rem;
+	padding: 1rem 1.25rem;
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+#faq-list ul li p {
+	margin: 0;
+}
+
+#faq-list ul li p strong {
+	display: block;
+	color: #141414;
+	font-weight: 700;
+	margin-bottom: 0.25rem;
+}
+
+/* Live demo prompts as responsive pills */
+#listDemo {
+	text-align: center;
+}
+
+#listDemo ul {
+	max-width: 48rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 0.75rem;
+}
+
+#listDemo ul li {
+	display: block !important;
+	background: #F8FAFF;
+	border: 1px solid #E6EEFF;
+	border-radius: 999px;
+	padding: 0.75rem 1rem;
+}
+
+#listDemo ul li p {
+	margin: 0;
+}
+
 #list13 {
 	color: #919191;
 	font-family: 'Nunito', sans-serif;
@@ -2291,6 +2406,13 @@ hr::before {
 	}
 	
 	#text61 {
+		letter-spacing: 0.04375rem;
+		width: calc(100% + 0.04375rem);
+		font-size: 0.875em;
+		line-height: 1.5;
+	}
+
+	#text61b {
 		letter-spacing: 0.04375rem;
 		width: calc(100% + 0.04375rem);
 		font-size: 0.875em;
@@ -3181,15 +3303,32 @@ hr::before {
 		font-size: 1em;
 		line-height: 1.5;
 	}
-	
+
 	#list12 ul li::after {
 		width: 0.625rem;
 	}
-	
+
 	#list12 ul li::before {
 		height: 1.5rem;
 		line-height: 1.5rem;
 		min-width: 0.703125rem;
+	}
+
+	#faq-list, #testimonials, #listDemo {
+		letter-spacing: 0rem;
+		font-size: 1em;
+		line-height: 1.5;
+	}
+
+	/* Mobile adjustments: spacing for FAQ cards and demo pills */
+	#faq-list ul {
+		padding: 0 0.5rem;
+	}
+
+	#listDemo ul {
+		gap: 0.5rem;
+		padding: 0 0.5rem;
+		grid-template-columns: 1fr;
 	}
 	
 	#list13 {
